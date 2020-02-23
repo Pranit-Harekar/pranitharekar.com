@@ -16,3 +16,14 @@ Hosted on [Zeit](https://zeit.co)
 
 - Run the app in the development mode `yarn start`
 - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## TODOs
+
+- [ ] Make website responsive
+- [ ] Refactor various components to avoid duplication
+- [ ] Dynamically retrieve Medium blogs
+- [ ] Display GitHub projects
+
+## Design Inspiration
+
+https://github.com/bchiang7/bchiang7.github.io
