@@ -1,42 +1,50 @@
 import "./App.css";
 
-import React from "react";
-import Intro from "./components/Intro";
-import Background from "./components/Background";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import FeaturedProjects from "./components/FeaturedProjects";
-import Blogs from "./components/Blogs";
-import Footer from "./components/Footer";
+import React, { useState } from "react";
+
 import {
   createMuiTheme,
   CssBaseline,
   MuiThemeProvider
 } from "@material-ui/core";
 
-import { orange } from "@material-ui/core/colors";
+import Header from "./components/Header";
+import Background from "./components/Background";
+import Blogs from "./components/Blogs";
+import Experience from "./components/Experience";
+import FeaturedProjects from "./components/FeaturedProjects";
+import Footer from "./components/Footer";
+import Intro from "./components/Intro";
+import Skills from "./components/Skills";
 
-const theme = createMuiTheme({
-  palette: {
-    primary: orange,
-    type: "light"
-  },
-  typography: {
-    fontFamily: "Lato"
-  }
-});
+export default () => {
+  const [mode, setMode] = useState(false);
 
-export default () => (
-  <MuiThemeProvider theme={theme}>
-    <CssBaseline />
-    <div className="App">
-      <Intro />
-      <Background />
-      <Skills />
-      <Experience />
-      <FeaturedProjects />
-      <Blogs />
-      <Footer />
-    </div>
-  </MuiThemeProvider>
-);
+  const theme = createMuiTheme({
+    palette: {
+      primary: {
+        main: "#007BFF",
+        contrastText: "#fff"
+      },
+      type: mode ? "dark" : "light"
+    },
+    typography: {
+      fontFamily: "Lato"
+    }
+  });
+  return (
+    <MuiThemeProvider theme={theme}>
+      <CssBaseline />
+      <div className="App">
+        <Header checked={mode} onChecked={() => setMode(!mode)} />
+        <Intro />
+        <Background />
+        <Skills />
+        <Experience />
+        <FeaturedProjects />
+        <Blogs />
+        <Footer />
+      </div>
+    </MuiThemeProvider>
+  );
+};

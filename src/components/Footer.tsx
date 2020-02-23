@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Typography } from "@material-ui/core";
+import { Box, Link, Typography } from "@material-ui/core";
 
 interface ISocialAccount {
   name: string;
@@ -72,9 +72,14 @@ export default () => (
             gutterBottom
             style={{ paddingRight: 10 }}
           >
-            <a className="customLink" target="_blank" href={account.link}>
+            <Link
+              color="textPrimary"
+              className="customLink"
+              target="_blank"
+              href={account.link}
+            >
               {account.name.toUpperCase()}
-            </a>
+            </Link>
           </Typography>
         ))}
         <div className="up" onClick={handleScrollToTop}>

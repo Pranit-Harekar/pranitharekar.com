@@ -47,7 +47,7 @@ export default () => (
                     variant="body1"
                     display="block"
                     gutterBottom
-                    color="primary"
+                    color="textPrimary"
                     style={{ textAlign: "right" }}
                   >
                     <b>LANGUAGES</b>
@@ -76,7 +76,7 @@ export default () => (
                     variant="body1"
                     display="block"
                     gutterBottom
-                    color="primary"
+                    color="textPrimary"
                     style={{ textAlign: "right" }}
                   >
                     <b>FRAMEWORKS</b>
@@ -94,7 +94,7 @@ export default () => (
                     variant="body1"
                     display="block"
                     gutterBottom
-                    color="primary"
+                    color="textPrimary"
                     style={{ textAlign: "right" }}
                   >
                     <b>TOOLS</b>
@@ -116,7 +116,7 @@ export default () => (
                     variant="body1"
                     display="block"
                     gutterBottom
-                    color="primary"
+                    color="textPrimary"
                     style={{ textAlign: "right" }}
                   >
                     <b>AREAS OF EXPERTIES</b>

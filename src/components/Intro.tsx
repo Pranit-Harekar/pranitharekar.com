@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Container, Typography } from "@material-ui/core";
+import { Container, Link, Typography } from "@material-ui/core";
 
 export default () => (
-  <Container fixed style={{ padding: "10% 0" }}>
+  <Container fixed style={{ padding: "7% 0 10% 0" }}>
     <Typography component="div">
       <Typography
         variant="h3"
@@ -36,13 +36,14 @@ export default () => (
         <span aria-label="" role="img" className="horizontal">
           👉
         </span>{" "}
-        <a
+        <Link
+          color="textPrimary"
           className="customLink"
           target="_blank"
           href="mailto:pranitharekar@hotmail.com"
         >
           pranitharekar@hotmail.com
-        </a>
+        </Link>
       </Typography>
     </Typography>
   </Container>

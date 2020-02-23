@@ -64,7 +64,11 @@ export default () => (
                 >
                   <Box>
                     <Typography variant="body1" display="block" gutterBottom>
-                      <Link style={{ textDecoration: "none" }} href={blog.link}>
+                      <Link
+                        color="textPrimary"
+                        style={{ textDecoration: "none" }}
+                        href={blog.link}
+                      >
                         <b>{blog.title}</b>
                       </Link>
                     </Typography>

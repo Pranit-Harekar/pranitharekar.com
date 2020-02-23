@@ -29,6 +29,7 @@ export default () => (
               <Box display="flex" flexDirection="column" justifyContent="start">
                 <Typography variant="subtitle1" gutterBottom>
                   <Link
+                    color="textPrimary"
                     target="_blank"
                     href="https://www.springboardretail.com/"
                     style={{ textDecoration: "none" }}
@@ -63,6 +64,7 @@ export default () => (
               <Box display="flex" flexDirection="column" justifyContent="start">
                 <Typography variant="subtitle1" gutterBottom>
                   <Link
+                    color="textPrimary"
                     target="_blank"
                     href="https://www.springboardretail.com/"
                     style={{ textDecoration: "none" }}
@@ -97,6 +99,7 @@ export default () => (
               <Box display="flex" flexDirection="column" justifyContent="start">
                 <Typography variant="subtitle1" gutterBottom>
                   <Link
+                    color="textPrimary"
                     target="_blank"
                     href="https://www.springboardretail.com/"
                     style={{ textDecoration: "none" }}

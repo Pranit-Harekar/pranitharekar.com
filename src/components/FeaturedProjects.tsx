@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Chip, Container, Grid, Typography } from "@material-ui/core";
+import { Chip, Container, Grid, Link, Typography } from "@material-ui/core";
 
 const project1Img = require("../assets/project1.png");
 const project2Img = require("../assets/project2.png");
@@ -78,28 +78,30 @@ export default () => (
                   {" "}
                   👉
                 </span>
-                <a
+                <Link
+                  color="textPrimary"
                   className="customLink"
                   target="_blank"
                   href="https://apps.apple.com/us/app/springboard-retail/id692910164?ls=1"
                   style={{ fontSize: 15 }}
                 >
                   View iOS App
-                </a>
+                </Link>
               </div>
               <div style={{ padding: 5 }}>
                 <span role="img" className="horizontal">
                   {" "}
                   👉
                 </span>
-                <a
+                <Link
+                  color="textPrimary"
                   className="customLink"
                   target="_blank"
                   href="https://www.springboardretail.com/request-test-drive-springboard-2017"
                   style={{ fontSize: 15 }}
                 >
                   View Web App
-                </a>
+                </Link>
               </div>
             </Grid>
           </Grid>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Grid, Typography } from "@material-ui/core";
+import { Container, Grid, Link, Typography } from "@material-ui/core";
 
 export default () => (
   <Container fixed style={{ padding: "5% 0" }}>
@@ -20,31 +20,34 @@ export default () => (
         <Grid item xs={8}>
           <Typography variant="body1" gutterBottom style={{ fontWeight: 200 }}>
             I'm currently a Software Developer at{" "}
-            <a
+            <Link
+              color="textPrimary"
               className="customLink"
               target="_blank"
               href="https://www.springboardretail.com/"
             >
               <b>Springboard Retail</b>
-            </a>{" "}
+            </Link>{" "}
             building things for mobile & web platforms with some amazingly
             talented folks. Prior to that, I graduated from{" "}
-            <a
+            <Link
+              color="textPrimary"
               className="customLink"
               target="_blank"
               href="https://www.syracuse.edu/"
             >
               <b>Syracuse University</b>
-            </a>{" "}
+            </Link>{" "}
             with a Master's degree focused in Computer Engineering along with a
             co-op at{" "}
-            <a
+            <Link
+              color="textPrimary"
               className="customLink"
               target="_blank"
               href="https://mysentio.com/"
             >
               <b>ChronicleMe</b>
-            </a>
+            </Link>
             .
             <br />
             <br />
@@ -57,8 +60,7 @@ export default () => (
             Vida personal — When I'm not in front of a computer screen, I'm
             probably playing video games, shooting some cool pictures or binge
             watching on Netflix. You can usually find me on Faceit/ESEA playing
-            CSGO (on my Alienware tank #BragAlert) or the spot closest to my dog
-            - Shera.
+            CSGO or cuddling my dog - Shera.
           </Typography>
         </Grid>
       </Grid>
