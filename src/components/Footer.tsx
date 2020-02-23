@@ -53,11 +53,15 @@ export default () => (
         style={{ paddingLeft: "5%" }}
       >
         Built with React &{" "}
-        <span role="img" className="heart">
+        <span role="img" className="heart" aria-label="">
           💙
         </span>
         <br />
-        by Pranit Harekar ™️ 2020
+        by Pranit Harekar{" "}
+        <span role="img" aria-label="">
+          ©️
+        </span>{" "}
+        2020
       </Typography>{" "}
       <Box
         display="flex"
@@ -84,7 +88,9 @@ export default () => (
         ))}
         <div className="up" onClick={handleScrollToTop}>
           <Typography variant="h5" gutterBottom>
-            ☝️
+            <span role="img" aria-label="">
+              ☝️
+            </span>
           </Typography>
         </div>
       </Box>

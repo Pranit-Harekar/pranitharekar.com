@@ -35,7 +35,7 @@ span.wave:hover {
 
 .up:hover {
   animation-name: up-animation;
-  animation-duration: 2.5s;
+  animation-duration: 2s;
   transform-origin: 70% 70%;
   display: inline-block;
 }
@@ -43,12 +43,12 @@ span.wave:hover {
 @keyframes up-animation {
   10%,
   90% {
-    transform: translate3d(0, -1px, 0);
+    transform: translate3d(0, -2px, 0);
   }
 
   20%,
   80% {
-    transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 3px, 0);
   }
 
   30%,

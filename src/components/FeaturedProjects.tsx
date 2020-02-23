@@ -45,7 +45,11 @@ export default () => (
         <Grid item xs={8}>
           <Grid container spacing={8}>
             <Grid item xs={8}>
-              <img src={project1Img} width="600px" />
+              <img
+                alt="Springboard Retail POS 1.0"
+                src={project1Img}
+                width="600px"
+              />
             </Grid>
             <Grid item xs>
               <Typography
@@ -108,7 +112,11 @@ export default () => (
           <div style={{ padding: 40 }} />
           <Grid container spacing={8}>
             <Grid item xs={8}>
-              <img src={project2Img} width="600px" />
+              <img
+                alt="Springboard Retail POS 1.0"
+                src={project2Img}
+                width="600px"
+              />
             </Grid>
             <Grid item xs>
               <Typography

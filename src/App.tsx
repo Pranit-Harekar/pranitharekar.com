@@ -8,25 +8,24 @@ import {
   MuiThemeProvider
 } from "@material-ui/core";
 
-import Header from "./components/Header";
 import Background from "./components/Background";
 import Blogs from "./components/Blogs";
 import Experience from "./components/Experience";
 import FeaturedProjects from "./components/FeaturedProjects";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Skills from "./components/Skills";
 
 export default () => {
-  const [mode, setMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main: "#007BFF",
-        contrastText: "#fff"
+        main: "#0070F3"
       },
-      type: mode ? "dark" : "light"
+      type: darkMode ? "dark" : "light"
     },
     typography: {
       fontFamily: "Lato"
@@ -36,7 +35,7 @@ export default () => {
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
       <div className="App">
-        <Header checked={mode} onChecked={() => setMode(!mode)} />
+        <Header checked={darkMode} onChecked={() => setDarkMode(!darkMode)} />
         <Intro />
         <Background />
         <Skills />

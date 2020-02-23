@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Link, Typography } from "@material-ui/core";
 
 export default () => (
-  <Container fixed style={{ padding: "7% 0 10% 0" }}>
+  <Container fixed style={{ padding: "5% 0 10% 0" }}>
     <Typography component="div">
       <Typography
         variant="h3"
@@ -28,7 +28,7 @@ export default () => (
         I'm <b>Pranit Harekar</b>, a Software Developer living in Boston. I
         build awesome mobile & web apps{" "}
         <span role="img" aria-label="">
-          🧑‍💻
+          👨🏻‍💻
         </span>
       </Typography>
       <Typography variant="h5" gutterBottom>
