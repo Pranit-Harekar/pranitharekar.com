@@ -1,51 +1,26 @@
-import Head from "next/head";
-import { useState } from "react";
-import useInterval from "./lib/useInterval";
-
-export default function Home() {
-  const [greeting, setGreeting] = useState("Hello");
-
-  useInterval(() => {
-    const greetings = ["Hello", "Hola", "Bonjour", "नमस्ते", "你好", "مرحبا"];
-    setGreeting(greetings[Math.floor(Math.random() * greetings.length)]);
-  }, 3000);
-
+export default function Portfolio() {
   return (
     <div className="container">
-      <Head>
-        <title>Pranit Harekar</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
         <div className="header">
-          <h1 className="title">{greeting}!</h1>
-          <h1 className="title">
-            I'm <a href="">Pranit Harekar</a>
-          </h1>
-          <h1 className="title">Welcome to my website.</h1>
+          <h1 className="title">Portfolio</h1>
         </div>
-
-        <div className="grid">
-          <a href="/portfolio" className="card">
-            <h3>Portfolio &rarr;</h3>
-            <p>Find in-depth information about my career.</p>
-          </a>
-
-          <a href="/blog" className="card">
-            <h3>Blog &rarr;</h3>
-            <p>Checkout my articles from tech sphere.</p>
-          </a>
-
-          <a href="/know_me" className="card">
-            <h3>Know me &rarr;</h3>
-            <p>Learn more about me & my life. Let's get personal!</p>
-          </a>
-
-          <a href="/say_hello" className="card">
-            <h3>Say hello &rarr;</h3>
-            <p>Instantly reach out to me. Share ideas or just say hello!</p>
-          </a>
+        <div className="background">
+          <p className="description">Hi, I am Pranit.</p>
+          <p className="description">
+            A software developer based in Boston with over 3 years of experience
+            in the software industry. Strong in design and integration
+            problem-solving skills. Expert in web and mobile application
+            development frameworks such as React, React Native, iOS and Android.
+            Skilled in developing product plans, requirements specifications,
+            user documentation, and architectural systems research. Strong
+            written and verbal communications.
+          </p>
+          <p className="description">
+            Skilled in developing product plans, requirements specifications,
+            user documentation, and architectural systems research. Strong
+            written and verbal communications..
+          </p>
         </div>
       </main>
 
@@ -123,6 +98,14 @@ export default function Home() {
         .header {
           text-align: left;
           min-width: 750px;
+        }
+
+        .background {
+          text-align: left;
+          max-width: 750px;
+
+          color: #808080;
+          text-decoration: none;
         }
 
         code {
