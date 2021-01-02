@@ -1,6 +1,6 @@
-# pranitharekar.com
+# v1
 
-> My personal website 👨🏻‍💻
+> My personal website v1 👨🏻‍💻
 
 Built with
 
