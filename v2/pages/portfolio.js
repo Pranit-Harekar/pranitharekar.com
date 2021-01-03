@@ -3,23 +3,35 @@ export default function Portfolio() {
     <div className="container">
       <main>
         <div className="header">
-          <h1 className="title">Portfolio</h1>
-        </div>
-        <div className="background">
-          <p className="description">Hi, I am Pranit.</p>
+          <h1 className="title">Portfolio 2020</h1>
           <p className="description">
-            A software developer based in Boston with over 3 years of experience
-            in the software industry. Strong in design and integration
-            problem-solving skills. Expert in web and mobile application
-            development frameworks such as React, React Native, iOS and Android.
-            Skilled in developing product plans, requirements specifications,
-            user documentation, and architectural systems research. Strong
-            written and verbal communications.
+            Hi, I am Pranit. A software developer based in Boston with over 3
+            years of experience in the software industry. Strong in design and
+            integration problem-solving skills.
           </p>
-          <p className="description">
-            Skilled in developing product plans, requirements specifications,
-            user documentation, and architectural systems research. Strong
-            written and verbal communications..
+          <div>
+            <button className="header-button header-button1">
+              Download Resume
+            </button>
+            <button className="header-button header-button2">
+              Continue Reading
+            </button>
+          </div>
+        </div>
+
+        <div className="background">
+          <div>
+            <div className="vertical-line" />
+            <div className="circle">
+              <div className="circle-content">01</div>
+            </div>
+          </div>
+          <h1 className="background-title">Background</h1>
+          <p>
+            Developers love Next.js, the open source React framework Vercel
+            built together with Google and Facebook. Next.js powers the biggest
+            websites like Airbnb and Twilio, for use cases in e-commerce,
+            travel, news, and marketing.
           </p>
         </div>
       </main>
@@ -87,25 +99,127 @@ export default function Portfolio() {
         .title {
           margin: 0;
           line-height: 1.15;
-          font-size: 4rem;
+          font-size: 5rem;
         }
 
         .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
+          line-height: 38px;
+          font-size: 24px;
+          font-weight: 400;
+          color: #666666;
+          font-family: "Inter";
         }
 
         .header {
-          text-align: left;
-          min-width: 750px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          max-width: 800px;
+          margin-top: 10rem;
+        }
+
+        .header-button {
+          padding: 16px 38px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+          border: 1px solid black;
+          border-radius: 5px;
+          margin: 1rem;
+        }
+
+        .header-button:focus,
+        .header-button:active {
+          outline: none !important;
+          box-shadow: none;
+        }
+
+        .header-button1 {
+          background-color: black;
+          color: white;
+        }
+
+        .header-button1:hover {
+          background-color: white;
+          color: black;
+        }
+
+        .header-button2 {
+          background-color: white;
+          border: 1px solid #eaeaea;
+          color: #666666;
+        }
+
+        .header-button2:hover {
+          background-color: white;
+          border: 1px solid black;
+          color: black;
         }
 
         .background {
-          text-align: left;
-          max-width: 750px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex-wrap: wrap;
 
-          color: #808080;
-          text-decoration: none;
+          max-width: 800px;
+          margin-top: 20rem;
+        }
+
+        .background-title {
+          margin-top: 2rem;
+          line-height: 1.15;
+          font-size: 2rem;
+          background: linear-gradient(
+            to right,
+            #0070f3 0%,
+            #15a1dd 20%,
+            #17b5d8 75%,
+            #1cd1d1 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .vertical-line {
+          height: 7rem;
+          width: 1px;
+          background-image: linear-gradient(
+            to bottom,
+            #ffffff 0%,
+            #17b5d8 60%,
+            #0070f3 80%
+          );
+          border-image-slice: 1;
+          margin-left: 25px;
+        }
+
+        .circle {
+          height: 50px;
+          width: 50px;
+          background-image: linear-gradient(
+            to right,
+            #0070f3 0%,
+            #17b5d8 75%,
+            #1cd1d1 100%
+          );
+          border-radius: 50%;
+        }
+
+        .circle-content {
+          display: table-cell;
+          padding: 14px;
+          vertical-align: middle;
+
+          font-size: 17px;
+          font-weight: 700;
+          color: white;
+          font-family: "Inter";
         }
 
         code {
