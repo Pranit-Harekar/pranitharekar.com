@@ -1,0 +1,18 @@
+{
+  "title": "Pranit Harekar",
+  "author": "Pranit Harekar",
+  "headerTitle": "Pranit Harekar",
+  "description": "A blog and personal portfolio by Pranit Harekar",
+  "language": "en-us",
+  "siteUrl": "https://pranitharekar.com",
+  "siteRepo": "https://github.com/pranit-harekar/pranitharekar.com",
+  "image": "/static/images/avatar.png",
+  "socialBanner": "/static/images/twitter-card.png",
+  "email": "pranitharekar@pm.me",
+  "github": "https://github.com/pranit-harekar",
+  "github_repo": "https://github.com/Pranit-Harekar/pranitharekar.com",
+  "twitter": "https://twitter.com/PranitHarekar",
+  "youtube": "https://youtube.com/PranitHarekar1",
+  "linkedin": "https://www.linkedin.com/in/pranitharekar",
+  "locale": "en-US"
+}

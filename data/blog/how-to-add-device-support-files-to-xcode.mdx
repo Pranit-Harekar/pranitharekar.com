@@ -1,0 +1,71 @@
+---
+title: 'How to add device support files to Xcode'
+date: 'Feb 23, 2020'
+tags: ['xcode', 'ios']
+draft: false
+summary: 'Often times you come across a situation wherein you are running on an old Xcode version while your physical device is running on a newer iOS version which is not supported by Xcode...'
+---
+
+Often times you come across a situation wherein you are running on an
+old Xcode version while your physical device is running on a newer iOS
+version which is not supported by Xcode. In such a situation, you need
+to manually add device support files to the Xcode package so it can
+smoothly build and run apps on a new iOS version.
+
+<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    <Image
+      alt="screenshot_missing_device_support_files"
+      src="/static/images/screenshot_missing_device_support_files.png"
+      width={800}
+      height={250}
+    />
+  </div>
+</div>
+
+In order to add device support files,
+
+## Step 1: Get device support files
+
+There is no official source from where you can download device support files.
+However, there is a community maintained GitHub repos or drives from where
+you can download them. Here is one of them,
+
+https://github.com/iGhibli/iOS-DeviceSupport/tree/master/DeviceSupport
+
+So go ahead & download the device support files matching your required iOS
+version. Its okay if you don’t find exact version e.g. version 12.2 works
+for 12.2.X
+
+💡 NOTE: Sometimes Xcode does not recognize device support files, in that case,
+make sure you rename device support files’ folder to match exact iOS version
+that Xcode is looking for, e.g. in the screenshot above Xcode is looking
+for iOS 12.2 (16E5191d) device support files, so make sure you include the
+version along with build number in parenthesis.
+
+## Step 2: Unzip & place files in Xcode package
+
+Next, unzip the files & place them at following location,
+
+```javascript
+Applications >> Xcode >> Right Click >> Show Package Contents >> Contents
+ >> Developer >> Platforms >> iPhoneOS.platform >> DeviceSupport
+```
+
+<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    <Image
+      alt="screenshot_xcode_device_support_location"
+      src="/static/images/screenshot_xcode_device_support_location.png"
+      width={800}
+      height={300}
+    />
+  </div>
+</div>
+
+## Step 3: Restart Xcode
+
+In order for the above changes to take place, you need to restart the Xcode
+& then use the device.
+
+That’s it! I hope these steps helped you and saved some of your precious time.
