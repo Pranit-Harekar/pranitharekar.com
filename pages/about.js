@@ -23,7 +23,11 @@ export default function About() {
               {siteMetadata.author}
             </h3>
             <div className="text-gray-500 dark:text-gray-400">Software Developer</div>
-            <div className="text-gray-500 dark:text-gray-400">@GlobalPayments</div>
+            <div className="text-blue-500">
+              <a href="https://www.globalpayments.com/" target="_blank" rel="noreferrer">
+                @GlobalPayments
+              </a>
+            </div>
             {/* <div className="flex pt-6 space-x-3">
               <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
               <SocialIcon kind="github" href={siteMetadata.github} />

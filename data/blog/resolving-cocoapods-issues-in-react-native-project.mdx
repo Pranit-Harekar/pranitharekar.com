@@ -1,0 +1,142 @@
+---
+title: 'Resolving CocoaPods issues in React Native project'
+date: 'Aug 4, 2018'
+tags: ['React Native', 'ios', 'Cocoapods']
+draft: false
+summary: 'The goal of this blog is to provide steps to help you resolve
+  commonly faced issues related to CocoaPods in React Native projects.'
+---
+
+The goal of this blog is to provide steps to help you resolve commonly
+faced issues related to CocoaPods in React Native projects.
+
+> I updated React-Native to the latest version and CocoaPods is
+> unable to resolve dependencies...
+
+> CocoaPods could not find compatible versions for pod Folly...
+
+> `Pod install` doesn’t install all the dependencies, fails to install GLog...
+
+Let's get started, shall we?
+
+## 1. Configure CocoaPods Dependencies
+
+Make sure that you have referred to the official docs on how to configure
+
+https://reactnative.dev/docs/integration-with-existing-apps
+
+It’s always good to start with the official documentation. Especially with
+the errors related to third party dependencies like GLog and Folly, it’s
+important that your podspecs are correct. So make sure that you compare
+your podfile to the one given in the official documentation.
+
+## 2. Update pod repository
+
+There is a possibility that your local pod repository is out-of-date.
+What?!! So CocoaPod maintains a local clone of the spec-repo. This
+repo is basically a list of all pods and versions available. It is
+located at ~/.cocoapods/repos path. So make sure that you update this
+repo before you try anything else. You can update it by running following command,
+
+```shell
+$ pod repo update
+```
+
+Official documentation [here](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update)
+
+## 3. Verify Xcode’s active dev directory path
+
+Often time developers work with multiple versions of Xcode, so they have
+to keep on hopping between different versions, and in that process, they
+forget to change the active developer directory for Xcode. It’s okay to
+forget small things when you are building big ones. Right? … No! So how to fix this?
+
+First, check your Xcode’s active developer directory by running,
+
+```shell
+xcode-select -p
+```
+
+This should print the active dev directory path `/Applications/Xcode.app/Contents/Developer`. It may differ if you have named your Xcode app differently, but ideally, it should be this one. The xcode-select utility controls the location of the developer directory used by xcrun, xcodebuild, cc and other Xcode and BSD development tools.
+
+Second, if your selected Xcode version is different than the one shown by this command then you should switch your active dev directory by running,
+
+```shell
+sudo xcode-select -s <your-xcode-application-path>
+```
+
+💡Pro tip: If you don’t know your Xcode’s path, simply drag and drop the Xcode app from the Applications directory onto your terminal. This should automatically add the path.
+
+This sets the active developer directory to the given path, for example,
+`/Applications/Xcode.app/Contents/Developer` or to whatever your path is. In conclusion, the selected Xcode’s path and your active developer directory path should match.
+Refer to this [issue](https://github.com/facebook/react-native/issues/16279).
+
+## 4. Assign command-line tools
+
+Xcode uses command-line tools to compile and link your Swift/Objective-C code. Make sure that you have assigned these command-line tools to the Xcode IDE by going to Preferences > Locations.
+
+<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    <Image
+      alt="screenshot-xcode-cli-locations"
+      src="/static/images/screenshot-xcode-cli-locations.png"
+      width={800}
+      height={390}
+    />
+  </div>
+</div>
+
+If you don’t have CLI tools then you can download them separately from [here](https://developer.apple.com/xcode/resources/)
+
+If this fails with errors mentioning xcrun, make sure that in Xcode in Preferences > Locations the Command Line Tools are assigned. — Official React-Native [Docs](https://reactnative.dev/docs/integration-with-existing-apps)
+
+## 5. Be smart!
+
+Often times we don’t read the error logs properly. For example,
+
+<div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
+  <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
+    <Image
+      alt="screenshot-xcode-cli-locations"
+      src="/static/images/screenshot-xcode-cli-locations.png"
+      width={800}
+      height={390}
+    />
+  </div>
+</div>
+
+This error says that CocoaPods is unable to find a compatible version for Folly. Along with that, it gives me information about which version it is expecting me to provide i.e. 2016.10.31.00
+
+Just as a side note, if you don’t know your current version then you can run
+
+```shell
+$ pod search Folly
+```
+
+Anyway, so how to fix this error?
+Just update the Folly podspec to the given/latest version by running,
+$ pod update Folly
+So after installation,
+
+```
+...
+Installing Folly 2016.10.31.00 (was 2016.09.26.00)
+...
+```
+
+Easy peasy!
+
+## 6. Be careful!
+
+There are a lot of solutions available on the internet but it’s your job to decide which solution is applicable to your situation. While resolving similar issues, I found a lot of misleading answers. One of them was, and I quote,
+
+> Delete entire podfile.lock and run `pod install` again..
+
+No! It is not recommended to delete the entire Podfile.lock file. It contains the references to the current versions of Pods your project use. So deleting the Podfile.lock will install the latest version for each pod which can break your build or cause other issues you may not notice. In short,
+
+> Podfile.lock avoids headaches caused by unexpected changes to dependencies. — CocoaPods Documentation.
+
+Read CocoaPods documentation [here](https://guides.cocoapods.org/using/using-cocoapods#what-is-podfilelock).
+Also, don’t run `$ pod update` unless you want to update all the pods.
+
+That’s it! I hope these steps helped you and saved some of your precious time. Thank you for reading the blog.
