@@ -1,5 +1,6 @@
 {
   "name": "pranitharekar.com",
+  "description": "My personal website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
