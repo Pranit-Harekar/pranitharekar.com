@@ -1,7 +1,7 @@
 {
   "name": "blog-site-vite",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "node scripts/generate-rss.mjs && vite",
@@ -15,5 +15,8 @@
     "gray-matter": "^4.0.3",
     "typescript": "~6.0.2",
     "vite": "^8.1.1"
+  },
+  "engines": {
+    "node": ">=24.x"
   }
 }
