@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Pranit Harekar</title>
+  <link>https://pranitharekar.com</link>
+  <description>Notes on building software and leading the people who build it.</description>
+  <item>
+    <title>Thanks for the shot</title>
+    <link>https://pranitharekar.com/#/posts/thanks-for-the-shot</link>
+    <guid>https://pranitharekar.com/#/posts/thanks-for-the-shot</guid>
+    <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Ten years ago I landed at JFK with a couple of bags and a scholarship. On America's 250th, a note of gratitude for the shot.]]></description>
+  </item>
+  <item>
+    <title>Being right is the trap</title>
+    <link>https://pranitharekar.com/#/posts/being-right-is-the-trap</link>
+    <guid>https://pranitharekar.com/#/posts/being-right-is-the-trap</guid>
+    <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[For years, being technically correct is how you win. Then you step into a lead role and the same playbook quietly stops working.]]></description>
+  </item>
+  <item>
+    <title>Technical debt is a financing decision, not a moral failing</title>
+    <link>https://pranitharekar.com/#/posts/on-technical-debt</link>
+    <guid>https://pranitharekar.com/#/posts/on-technical-debt</guid>
+    <pubDate>Wed, 18 Feb 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Teams that treat all debt as shameful end up hiding it. Teams that treat it as a lever end up managing it.]]></description>
+  </item>
+  <item>
+    <title>Why I built this</title>
+    <link>https://pranitharekar.com/#/posts/why-i-built-this</link>
+    <guid>https://pranitharekar.com/#/posts/why-i-built-this</guid>
+    <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[This isn't a portfolio. It's just me documenting thoughts and sharing experiences, because in the AI era problem solving and storytelling matter more than a grid of logos.]]></description>
+  </item>
+</channel>
+</rss>

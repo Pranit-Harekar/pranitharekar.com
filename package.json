@@ -1,0 +1,19 @@
+{
+  "name": "blog-site-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/generate-rss.mjs && vite",
+    "build": "node scripts/generate-rss.mjs && tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "marked": "^18.0.5"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1"
+  }
+}

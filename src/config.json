@@ -1,0 +1,11 @@
+{
+  "siteTitle": "Pranit Harekar",
+  "tagline": "Notes on building software and leading the people who build it.",
+  "author": "Pranit Harekar",
+  "url": "https://pranitharekar.com",
+  "links": [
+    { "label": "Email", "href": "mailto:harekarpranit@gmail.com" },
+    { "label": "GitHub", "href": "https://github.com/pranit-harekar" },
+    { "label": "LinkedIn", "href": "https://linkedin.com/in/pranitharekar" }
+  ]
+}
