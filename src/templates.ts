@@ -42,6 +42,7 @@ export function renderPost(slug: string): string {
         <h1 class="post-title">${post.title}</h1>
       </header>
       <div class="post-body">${post.html}</div>
+      <div id="disqus_thread" class="disqus-thread"></div>
       <footer class="post-footer"><a href="#/">&larr; Back to all entries</a></footer>
     </article>
   `;

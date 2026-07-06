@@ -4,6 +4,8 @@ import {
   renderAbout,
   renderNotFound,
 } from "./templates";
+import { getPost } from "./content-loader";
+import { loadDisqus } from "./disqus";
 import config from "./config.json";
 
 function getMainElement(): HTMLElement {
@@ -34,8 +36,15 @@ function render(): void {
     document.title = `About · ${config.siteTitle}`;
     setActiveNavLink("/about");
   } else if (segments[0] === "posts" && segments[1]) {
-    main.innerHTML = renderPost(segments[1]);
-    document.title = config.siteTitle;
+    const slug = segments[1];
+    main.innerHTML = renderPost(slug);
+    const post = getPost(slug);
+    if (post) {
+      document.title = `${post.title} · ${config.siteTitle}`;
+      loadDisqus(`${config.url}/#/posts/${slug}`, slug, post.title);
+    } else {
+      document.title = config.siteTitle;
+    }
     setActiveNavLink("");
   } else {
     main.innerHTML = renderNotFound();

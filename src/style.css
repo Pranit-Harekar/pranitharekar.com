@@ -229,8 +229,14 @@ main.wrap { padding-block: 56px 96px; }
 .post-body img { max-width: 100%; border-radius: 2px; }
 .post-body a { color: var(--accent); }
 
-.post-footer {
+.disqus-thread {
   margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule);
+}
+
+.post-footer {
+  margin-top: 40px;
   padding-top: 24px;
   border-top: 1px solid var(--rule);
   font-family: var(--mono);
